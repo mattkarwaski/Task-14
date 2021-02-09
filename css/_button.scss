@@ -1,0 +1,47 @@
+#container_list {
+  margin: 30px 20px 30px 20px;
+
+  .add-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  #userinput {
+    height: 2.7rem;
+  }
+
+  #enter {
+    height: 40px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.delete {
+  scale: 50%;
+  border-radius: 50px;
+
+  &:hover {
+    color: red;
+    animation: glowing 1100ms infinite;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #a80505;
+  }
+  50% {
+    box-shadow: 0 0 15px #e81919;
+  }
+  100% {
+    box-shadow: 0 0 5px #a80505;
+  }
+}

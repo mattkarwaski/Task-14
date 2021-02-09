@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <div class="modal fade" id="setTimerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="seconds-field" placeholder="seconds" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="setTimerBtn">
+                            Set timer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="alarm-modal">
+            <img src="./img/alarm.gif" />
+            <audio controls hidden loop id="alarm-sound">
+                <source src="./audio/alarm.mp3" />
+            </audio>
+            <button id="stop-alarm" type="button" class="btn btn-primary">Stop</button>
+        </div>
+        <div class="dashboard-container">
+            <div class="sidebar"></div>
+            <div class="top">
+                <button type="button" class="btn btn-primary theme-button">Change theme</button>
+            </div>
+            <div class="content">
+                <div class="news-section">
+                    <div class="search">
+                        <input type="text" placeholder="Search..." class="form-control" />
+                    </div>
+                    <div class="news"></div>
+                </div>
+                <div class="weather"></div>
+                <div class="clock">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="title">Time in Kraków:</div>
+                            <div class="time">Loading...</div>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#setTimerModal">
+                            Add timer
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-3" id="container_list">
+                    <div class="add-list">
+                        <input class="form-control me-2" id="userinput" type="text" placeholder="Add to your list">
+                        <button class="btn btn-primary" id="enter">Add</button>
+                    </div>
+                    <ul>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="./js/app.js"></script>
+        <script src="./js/weather.js"></script>
+        <script src="./js/clock.js"></script>
+        <script src="./js/button.js"></script>
+    </body>
+</html>

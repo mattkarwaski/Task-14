@@ -1,0 +1,101 @@
+.theme-night {
+    .sidebar {
+        background-color: #333;
+    }
+
+    .top {
+        background-color: #252525;
+    }
+
+    .content {
+        background-color: #222;
+    }
+
+    .news {
+        .card {
+            background-color: #333;
+        }
+        .card-title {
+            color: white;
+        }
+        .card-text {
+            color: #ccc;
+        }
+    }
+
+    .search {
+        .form-control {
+            background-color: #444;
+            border-color: rgba(187, 187, 187, 0.25);
+            color: #ccc;
+
+            &:focus {
+                border-color: #999;
+                box-shadow: 0 0 0 0.25rem
+                    rgba(187, 187, 187, 0.25);
+            }
+        }
+    }
+    .weather {
+        .card {
+            background-color: #333;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+            .title,
+            span,
+            .temp {
+                color: white;
+            }
+        }
+
+        .thunderstorm {
+            background-image: linear-gradient(
+                135deg,
+                #333,
+                #43505e
+            );
+        }
+
+        .drizzle {
+            background-image: linear-gradient(
+                135deg,
+                #333,
+                #244049
+            );
+            color: white;
+        }
+
+        .rain {
+            background-image: linear-gradient(
+                135deg,
+                #333,
+                #3c5c70
+            );
+        }
+
+        .snow {
+            background-image: linear-gradient(
+                135deg,
+                #333,
+                #344852
+            );
+        }
+
+        .clear {
+            background-image: linear-gradient(
+                135deg,
+                #333,
+                #63593e
+            );
+        }
+
+        .clouds {
+            background-image: linear-gradient(
+                135deg,
+                #333,
+                #747474
+            );
+            color: white;
+        }
+    }
+}
